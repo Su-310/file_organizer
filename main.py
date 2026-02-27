@@ -19,6 +19,8 @@ def organize_files(target_dir, dry_run=False):
 
                 if not dry_run:
                     shutil.move(src, dest)
+                else:
+                    print("疎通確認")
 
     except FileNotFoundError:
         logging.error(f"フォルダが見つかりません: {target_dir}")

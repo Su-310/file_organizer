@@ -1,7 +1,8 @@
-# File Organizer Tool
+# File Organizer
 
-指定したフォルダ内のファイルを拡張子ごとに整理するPythonスクリプトです。
+指定したフォルダ内のファイルを拡張子ごとに整理するツールです。
 
-## Usage
+## 使い方
+
 ```bash
-python main.py
+python main.py <target_dir>
