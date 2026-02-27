@@ -19,8 +19,6 @@ def organize_files(target_dir, dry_run=False):
 
                 if not dry_run:
                     shutil.move(src, dest)
-                else:
-                    print("疎通確認")
 
     except FileNotFoundError:
         logging.error(f"フォルダが見つかりません: {target_dir}")
@@ -28,7 +26,7 @@ def organize_files(target_dir, dry_run=False):
         logging.error("権限エラーが発生しました")
     except Exception as e:
         logging.exception(f"予期しないエラー: {e}")
-
+        
 def main():
     parser = argparse.ArgumentParser(description="File organizer")
     parser.add_argument("target", help="整理対象のフォルダ")
